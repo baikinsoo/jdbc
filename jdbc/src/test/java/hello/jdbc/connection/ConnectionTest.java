@@ -39,11 +39,11 @@ public class ConnectionTest {
         dataSource.setPassword(PASSWORD);
         dataSource.setMaximumPoolSize(10);
         dataSource.setPoolName("MyPool");
+
         useDataSource(dataSource);
         Thread.sleep(1000); //커넥션 풀에서 커넥션 생성 시간 대기
     }
 
-    @Test
     private void useDataSource(DataSource dataSource) throws SQLException {
         Connection con1 = dataSource.getConnection();
         Connection con2 = dataSource.getConnection();
