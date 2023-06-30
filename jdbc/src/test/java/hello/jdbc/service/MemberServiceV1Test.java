@@ -65,7 +65,7 @@ class MemberServiceV1Test {
     }
 
     @Test
-    @DisplayName("이제 중 예외 발생")
+    @DisplayName("이체 중 예외 발생")
     void accountTransferEx() throws SQLException {
         //given
         Member memberA = new Member(Member_A, 10000);
