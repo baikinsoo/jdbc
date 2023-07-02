@@ -64,5 +64,4 @@ public class UncheckedTest {
             throw new MyUncheckedException("ex");
         }
     }
-
 }

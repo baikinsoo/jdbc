@@ -38,6 +38,7 @@ public class UnCheckedAppTest {
     }
 
     static class Service {
+
         Repository repository = new Repository();
         NetworkClient networkClient = new NetworkClient();
 
@@ -45,8 +46,8 @@ public class UnCheckedAppTest {
             repository.call();
             networkClient.call();
         }
-
     }
+
     static class NetworkClient {
         public void call() {
             throw new RuntimeConnectException("연결 실패");
@@ -59,7 +60,6 @@ public class UnCheckedAppTest {
             } catch (SQLException e) {
                 throw new RuntimeSQLException(e);
             }
-
         }
 
         public void runSQL() throws SQLException {
@@ -74,9 +74,11 @@ public class UnCheckedAppTest {
     }
 
     static class RuntimeSQLException extends RuntimeException {
+        public RuntimeSQLException() {
+        }
+
         public RuntimeSQLException(Throwable cause) {
             super(cause);
         }
     }
-
 }
