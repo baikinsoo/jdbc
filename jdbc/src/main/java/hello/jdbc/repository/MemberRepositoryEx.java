@@ -14,4 +14,4 @@ public interface MemberRepositoryEx {
     void update(String memberId, int money) throws SQLException;
 
     void delete(String memberId) throws SQLException;
-    }
+}
